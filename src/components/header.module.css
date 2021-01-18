@@ -1,0 +1,34 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.root {
+  position: relative;
+  z-index: 100;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
+  background-color:var(--color-background3);
+  text-align: center;
+  line-height: var(--font-title1-line-height);
+}
+
+.siteTitle {
+  color: var(--color-logo1);
+  font-weight: 400;
+  font-size: 1.5em;
+  text-decoration: none;
+  
+}
+
+.siteTitle h1 {
+  margin-block-end: 10px;
+}
+
+.siteDesc {
+  color: var(--color-logo2);
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-block-start: 0px;
+}

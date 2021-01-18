@@ -1,0 +1,49 @@
+{
+  "name": "fortis-klekanger-starter",
+  "private": true,
+  "description": "",
+  "version": "0.2.0",
+  "author": "Kurt Lekanger <kurt@lekanger.no>",
+  "dependencies": {
+    "@wordpress/block-library": "^2.22.6",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.24.45",
+    "gatsby-image": "^2.4.16",
+    "gatsby-plugin-manifest": "^2.4.23",
+    "gatsby-plugin-offline": "^3.2.23",
+    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sharp": "^2.6.27",
+    "gatsby-source-filesystem": "^2.3.24",
+    "gatsby-source-graphql": "^2.7.1",
+    "gatsby-source-wordpress-experimental": "^1.3.6",
+    "gatsby-transformer-sharp": "^2.5.13",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klekanger/wordpress-gatsby-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/klekanger/wordpress-gatsby-starter/issues"
+  }
+}
