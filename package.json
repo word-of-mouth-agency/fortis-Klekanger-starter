@@ -3,7 +3,7 @@
   "private": true,
   "description": "",
   "version": "0.2.0",
-  "author": "Kurt Lekanger <kurt@lekanger.no>",
+  "author": "Luke Fordham",
   "dependencies": {
     "@wordpress/block-library": "^2.22.6",
     "dotenv": "^8.2.0",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/klekanger/wordpress-gatsby-starter"
+    "url": "https://github.com/word-of-mouth-agency/fortis-Klekanger-starter/tree/staging"
   },
   "bugs": {
     "url": "https://github.com/klekanger/wordpress-gatsby-starter/issues"

@@ -9,9 +9,9 @@ import styles from "./layout.module.css"
 const Layout = ({ children }) => {
   const {
     data: {
-      nodes: [{ generalSettings: data }],
+      nodes: [{ generalSettings: data }]
     },
-    pages,
+    pages
   } = useStaticQuery(
     graphql`
       query {
@@ -46,15 +46,9 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       <footer className={styles.pageFooter}>
-        Kurt Lekanger © {new Date().getFullYear()}, made with
+        Word of Mouth Agency © {new Date().getFullYear()}, made with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
-        <p>
-          Download template from{" "}
-          <a href="https://github.com/klekanger/wordpress-gatsby-starter">
-            my Github page
-          </a>
-        </p>
       </footer>
     </>
   )
