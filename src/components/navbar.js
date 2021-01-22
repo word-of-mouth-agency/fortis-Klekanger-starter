@@ -5,6 +5,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./navbar.module.css"
+import logo from "./../images/fortis-nav-logo.svg"
 
 const Navbar = props => {
   const navPages = []
@@ -18,7 +19,7 @@ const Navbar = props => {
           </li>
         )
       }
-      //console.log(page)
+      console.log(page)
     })
   }
 
@@ -26,6 +27,9 @@ const Navbar = props => {
 
   return (
     <>
+      <div>
+        <img className="nav-logo" src={logo} />
+      </div>
       <ul className={styles.nav}>{navPages}</ul>
     </>
   )
