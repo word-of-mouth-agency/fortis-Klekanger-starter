@@ -23,18 +23,10 @@ const Navbar = props => {
   }
 
   allPages()
-  //console.log(allPages())
 
   return (
     <>
-      <ul className={styles.nav}>
-        {/* {props.pages.nodes.map(page => (
-          <li key={page.id}>
-            <Link to={page.uri}>{page.title}</Link>
-          </li>
-        ))} */}
-        {navPages}
-      </ul>
+      <ul className={styles.nav}>{navPages}</ul>
     </>
   )
 }
