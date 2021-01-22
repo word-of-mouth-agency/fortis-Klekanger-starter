@@ -6,6 +6,8 @@ import Header from "./header"
 import Navbar from "./navbar"
 import styles from "./layout.module.css"
 
+import "../styles/globalStyles.css"
+
 const Layout = ({ children }) => {
   const {
     data: {
