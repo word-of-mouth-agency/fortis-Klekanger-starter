@@ -28,6 +28,9 @@ const Layout = ({ children }) => {
             id
             uri
             title
+            isOnNav {
+              isonnav
+            }
           }
         }
       }
