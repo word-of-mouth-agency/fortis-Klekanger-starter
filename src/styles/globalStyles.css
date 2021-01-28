@@ -62,3 +62,8 @@ nav ul li {
   height: 32px;
   display: block;
 }
+
+.navlink {
+  font-size: 14px;
+  font-weight: 400;
+}

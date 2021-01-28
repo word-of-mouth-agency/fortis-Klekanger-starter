@@ -16,7 +16,7 @@ const Navbar = props => {
       if (page.isOnNav.isonnav === true) {
         navPages.push(
           <li key={page.id}>
-            <Link to={page.uri} className={`navlink_${page.slug}`}>
+            <Link to={page.uri} className={`navlink_${page.slug} navlink`}>
               {page.title.toUpperCase()}
             </Link>
           </li>
@@ -26,8 +26,12 @@ const Navbar = props => {
     })
     navPages.push(
       <li>
-        <a href="tel:+61-400-000-000" className="navlink_phone-number">
-          <img src={phone_icon} className="navlink_phone-icon" />
+        <a href="tel:+61-400-000-000" className="navlink_phone-number navlink">
+          <img
+            src={phone_icon}
+            className="navlink_phone-icon"
+            alt="phone icon"
+          />
           <p>+61 400 000 000</p>
         </a>
       </li>
