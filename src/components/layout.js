@@ -2,7 +2,8 @@ import React from "react"
 // import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+//import Header from "./header"
+import Helmet from "react-helmet"
 import Navbar from "./navbar"
 import styles from "./layout.module.css"
 
@@ -47,8 +48,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       <Navbar pages={pages} />
-      <Header siteTitle={title} siteDesc={description} />
+      {/* <Header siteTitle={title} siteDesc={description} /> */}
       <main>{children}</main>
 
       <footer className={styles.pageFooter}>
