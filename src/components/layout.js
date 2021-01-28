@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
             id
             uri
             title
+            slug
             isOnNav {
               isonnav
             }

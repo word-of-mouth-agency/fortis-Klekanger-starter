@@ -6,6 +6,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styles from "./navbar.module.css"
 import logo from "./../images/fortis-nav-logo.svg"
+import phone_icon from "./../images/icon-phone.svg"
 
 const Navbar = props => {
   const navPages = []
@@ -15,12 +16,22 @@ const Navbar = props => {
       if (page.isOnNav.isonnav === true) {
         navPages.push(
           <li key={page.id}>
-            <Link to={page.uri}>{page.title.toUpperCase()}</Link>
+            <Link to={page.uri} className={`navlink_${page.slug}`}>
+              {page.title.toUpperCase()}
+            </Link>
           </li>
         )
       }
       console.log(page)
     })
+    navPages.push(
+      <li>
+        <a href="tel:+61-400-000-000" className="navlink_phone-number">
+          <img src={phone_icon} className="navlink_phone-icon" />
+          <p>+61 400 000 000</p>
+        </a>
+      </li>
+    )
   }
 
   allPages()

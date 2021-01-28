@@ -28,10 +28,37 @@ nav {
   display: flex;
 }
 
+nav ul li {
+  margin: auto 0;
+  display: block;
+}
+
 .logo-container {
   padding: 20px 30px;
 }
 
 .navbar-module--nav--25Dcz {
   margin: auto;
+}
+
+.navlink_book-a-quote {
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: solid 2px #f2bb2f;
+}
+
+.navlink_phone-number {
+  display: flex;
+  /* vertical-align: middle; */
+  border: solid 2px #f2bb2f;
+  border-radius: 5px;
+}
+
+.navlink_phone-number p {
+  margin: auto 10px;
+}
+
+.navlink_phone-icon {
+  height: 32px;
+  display: block;
 }
