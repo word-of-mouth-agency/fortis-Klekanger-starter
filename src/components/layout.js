@@ -5,7 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 //import Header from "./header"
 import Helmet from "react-helmet"
 import Navbar from "./navbar"
-import styles from "./layout.module.css"
+import Footer from "./footer"
+//import styles from "./layout.module.css"
 
 import "../styles/globalStyles.css"
 
@@ -56,11 +57,13 @@ const Layout = ({ children }) => {
       {/* <Header siteTitle={title} siteDesc={description} /> */}
       <main>{children}</main>
 
-      <footer className={styles.pageFooter}>
+      {/* <footer className={styles.pageFooter}>
         Word of Mouth Agency © {new Date().getFullYear()}, made with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      </footer> */}
+
+      <Footer pages={pages} />
     </>
   )
 }

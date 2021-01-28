@@ -20,12 +20,33 @@ body > div > div {
   height: 100%;
 }
 
+main {
+  margin-top: 80px;
+}
+
 a {
   color: var(--color-maintext);
 }
 
-nav {
+nav,
+footer {
   display: flex;
+  width: 100%;
+  background: #fcfcfc;
+  z-index: 10;
+  height: 80px;
+}
+
+nav {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  top: 0;
+  position: fixed;
+}
+
+footer {
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.05);
+  /* bottom: 0; */
+  position: absolute;
 }
 
 nav ul li {
@@ -59,7 +80,7 @@ nav ul li {
 }
 
 .navlink_phone-icon {
-  height: 32px;
+  height: 28px;
   display: block;
 }
 
