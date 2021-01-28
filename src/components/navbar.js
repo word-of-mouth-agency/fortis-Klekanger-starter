@@ -15,7 +15,7 @@ const Navbar = props => {
       if (page.isOnNav.isonnav === true) {
         navPages.push(
           <li key={page.id}>
-            <Link to={page.uri}>{page.title}</Link>
+            <Link to={page.uri}>{page.title.toUpperCase()}</Link>
           </li>
         )
       }
@@ -27,10 +27,14 @@ const Navbar = props => {
 
   return (
     <>
-      <div>
-        <img className="nav-logo" src={logo} />
-      </div>
-      <ul className={styles.nav}>{navPages}</ul>
+      <nav>
+        <div className="logo-container">
+          <Link to="/">
+            <img className="nav-logo" src={logo} alt="fortis logo" />
+          </Link>
+        </div>
+        <ul className={styles.nav}>{navPages.reverse()}</ul>
+      </nav>
     </>
   )
 }

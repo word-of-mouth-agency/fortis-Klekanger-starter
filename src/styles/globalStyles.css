@@ -23,3 +23,15 @@ body > div > div {
 a {
   color: var(--color-accent);
 }
+
+nav {
+  display: flex;
+}
+
+.logo-container {
+  padding: 20px 30px;
+}
+
+.navbar-module--nav--25Dcz {
+  margin: auto;
+}
