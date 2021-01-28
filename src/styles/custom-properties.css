@@ -2,13 +2,13 @@
     Variables for colors, fonts and typography
 */
 
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i|Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --font-family-sans: "Josefin Sans", sans-serif;
+  --font-family-sans: "Poppins", sans-serif;
   --font-family-txt: "Lato", sans-serif;
 
-  --color-maintext: #111;
+  --color-maintext: #393939;
   --color-text2: #fff;
   --color-text3: #697a90;
   --color-text4: #fff;
@@ -16,7 +16,7 @@
   --color-background2: #252626;
   --color-background3: #d9d9d9;
   --color-accent: #777;
-  --color-logo1: #1d1b1a;
+  --color-logo1: #393939;
   --color-logo2: #014074;
 
   /* Typography */

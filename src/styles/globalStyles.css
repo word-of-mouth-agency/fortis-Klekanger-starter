@@ -21,7 +21,7 @@ body > div > div {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-maintext);
 }
 
 nav {
