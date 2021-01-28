@@ -45,7 +45,6 @@ nav {
 
 footer {
   box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.05);
-  /* bottom: 0; */
   position: absolute;
 }
 
@@ -65,14 +64,15 @@ nav ul li {
 .navlink_book-a-quote {
   padding: 4px 10px;
   border-radius: 5px;
-  border: solid 2px #f2bb2f;
+  border-radius: 5px;
+  outline: auto #f2bb2f;
 }
 
 .navlink_phone-number {
   display: flex;
   /* vertical-align: middle; */
-  border: solid 2px #f2bb2f;
   border-radius: 5px;
+  outline: auto #f2bb2f;
 }
 
 .navlink_phone-number p {
