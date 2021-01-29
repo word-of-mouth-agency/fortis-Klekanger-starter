@@ -18,7 +18,7 @@ const Footer = props => {
       if (page.isOnNav.isonnav === true) {
         navPages.push(
           <li key={page.id}>
-            {window.location.pathname === page.uri ? (
+            {props.location.pathname === page.uri ? (
               <Link
                 to={page.uri}
                 style={{ fontWeight: "bold" }}

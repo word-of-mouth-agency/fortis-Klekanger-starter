@@ -10,7 +10,7 @@ import Footer from "./footer"
 
 import "../styles/globalStyles.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const {
     data: {
       nodes: [{ generalSettings: data }]
@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <Navbar pages={pages} />
+      <Navbar location={location} pages={pages} />
       {/* <Header siteTitle={title} siteDesc={description} /> */}
       <main>{children}</main>
 
@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer> */}
 
-      <Footer pages={pages} />
+      <Footer location={location} pages={pages} />
     </>
   )
 }

@@ -8,11 +8,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styles from "./post.module.css"
 
-const PageTemplate = ({ data }) => {
+const PageTemplate = ({ data, location }) => {
   const { page } = data
   const { title, content } = page
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title={title || "Untitled"} />
       <div className={styles.postContainer}>
         <article>
