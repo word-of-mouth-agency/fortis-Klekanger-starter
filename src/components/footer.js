@@ -73,7 +73,7 @@ const Footer = props => {
             </div>
           </li>
         </ul>
-        <h4 className="footer-title footer-title-nav">Navigation</h4>
+        <h3 className="footer-title footer-title-nav">Navigation</h3>
         <ul className="footer-pages">{navPages}</ul>
         <p className="copyright footer-small">© Fortis Group WA 2020</p>
         <p className="website-by footer-small">
