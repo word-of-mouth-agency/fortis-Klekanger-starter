@@ -4,6 +4,7 @@
 
 import React from "react"
 import { Link } from "gatsby"
+import { globalHistory } from "@reach/router"
 //import styles from "./navbar.module.css"
 import logo from "./../images/fortis-footer-logo.svg"
 import phone_icon from "./../images/icon-phone-dark.svg"
@@ -12,13 +13,14 @@ import ig_icon from "./../images/instagram-icon.svg"
 
 const Footer = props => {
   const navPages = []
+  const path = globalHistory.location.pathname
 
   const allPages = () => {
     props.pages.nodes.forEach(page => {
       if (page.isOnNav.isonnav === true) {
         navPages.push(
           <li key={page.id}>
-            {props.location.pathname === page.uri ? (
+            {path === page.uri ? (
               <Link
                 to={page.uri}
                 style={{ fontWeight: "bold" }}
