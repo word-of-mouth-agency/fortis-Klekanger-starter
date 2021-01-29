@@ -54,7 +54,7 @@ footer {
   height: 380px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 25% 1fr;
+  grid-template-rows: 25% 1fr 10%;
   background-color: #393939;
 }
 
@@ -159,4 +159,20 @@ nav ul li:hover a {
 footer,
 footer ul li a {
   color: white;
+}
+
+.footer-small {
+  grid-row: 3;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.copyright {
+  grid-column: 1;
+  margin: auto auto auto 30px;
+}
+
+.website-by {
+  grid-column: 4;
+  margin: auto 30px auto auto;
 }
