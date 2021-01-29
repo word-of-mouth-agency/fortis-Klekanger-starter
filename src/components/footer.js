@@ -18,9 +18,23 @@ const Footer = props => {
       if (page.isOnNav.isonnav === true) {
         navPages.push(
           <li key={page.id}>
-            <Link to={page.uri} className={`footerlink_${page.slug} navlink`}>
-              {page.title.toUpperCase()}
-            </Link>
+            {window.location.pathname === page.uri ? (
+              <Link
+                to={page.uri}
+                style={{ fontWeight: "bold" }}
+                className={`footerlink_${page.slug} navlink`}
+              >
+                {page.title.toUpperCase()}
+              </Link>
+            ) : (
+              <Link
+                to={page.uri}
+                style={{ fontWeight: "400" }}
+                className={`footerlink_${page.slug} navlink`}
+              >
+                {page.title.toUpperCase()}
+              </Link>
+            )}
           </li>
         )
       }

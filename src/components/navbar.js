@@ -16,9 +16,23 @@ const Navbar = props => {
       if (page.isOnNav.isonnav === true) {
         navPages.push(
           <li key={page.id}>
-            <Link to={page.uri} className={`navlink_${page.slug} navlink`}>
-              {page.title.toUpperCase()}
-            </Link>
+            {window.location.pathname === page.uri ? (
+              <Link
+                to={page.uri}
+                style={{ fontWeight: "bold" }}
+                className={`navlink_${page.slug} navlink`}
+              >
+                {page.title.toUpperCase()}
+              </Link>
+            ) : (
+              <Link
+                to={page.uri}
+                style={{ fontWeight: "400" }}
+                className={`navlink_${page.slug} navlink`}
+              >
+                {page.title.toUpperCase()}
+              </Link>
+            )}
           </li>
         )
       }
