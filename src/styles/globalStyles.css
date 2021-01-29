@@ -25,7 +25,7 @@ body > div > div {
 main {
   margin-top: 80px;
   height: fit-content;
-  min-height: 100%;
+  min-height: calc(100vh - 80px);
 }
 
 a {
@@ -38,19 +38,24 @@ footer {
   width: 100%;
   background: #fcfcfc;
   z-index: 10;
-  height: 80px;
 }
 
 nav {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
   top: 0;
   position: fixed;
+  height: 80px;
 }
 
 footer {
   box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.05);
   /* position: absolute; */
   bottom: 0;
+  height: 380px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25% 1fr;
+  background-color: #393939;
 }
 
 nav ul li {
@@ -60,6 +65,14 @@ nav ul li {
 
 .logo-container {
   padding: 20px 30px;
+  height: fit-content;
+}
+
+.footer-container {
+  padding: 0;
+  padding-left: 30px;
+  margin: auto 0;
+  margin-bottom: 0;
 }
 
 .navbar-module--nav--25Dcz {
@@ -93,7 +106,57 @@ nav ul li {
   font-size: 14px;
   font-weight: 400;
   transition: all ease 0.2s;
+  width: fit-content;
 }
 
 nav ul li:hover a {
+}
+
+.contact-links {
+  list-style: none;
+  grid-row: 2;
+  grid-column: 1;
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact-links li {
+  padding: 0 0 20px 0;
+}
+
+.footer-social {
+  padding-right: 10px;
+}
+
+.footer-pages {
+  list-style: none;
+  grid-row: 2;
+  grid-column: 2;
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-pages li {
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  grid-row: 1;
+  height: fit-content;
+  margin: auto 0;
+  margin-bottom: 0;
+  padding: 0 0 0 30px;
+}
+
+.footer-title-nav {
+  grid-column: 2;
+}
+
+footer,
+footer ul li a {
+  color: white;
 }

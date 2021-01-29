@@ -43,7 +43,7 @@ const Navbar = props => {
   return (
     <>
       <nav>
-        <div className="logo-container">
+        <div className="logo-container nav-container">
           <Link to="/">
             <img className="nav-logo" src={logo} alt="fortis logo" />
           </Link>
