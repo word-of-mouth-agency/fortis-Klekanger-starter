@@ -6,7 +6,7 @@ import React from "react"
 import { Link } from "gatsby"
 //import styles from "./navbar.module.css"
 import logo from "./../images/fortis-footer-logo.svg"
-import phone_icon from "./../images/icon-phone.svg"
+import phone_icon from "./../images/icon-phone-dark.svg"
 import fb_icon from "./../images/fb-icon.svg"
 import ig_icon from "./../images/instagram-icon.svg"
 
