@@ -8,8 +8,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const {
     data: {
       allWpPost: { nodes: allPosts },
-      allWpPage: { nodes: allPages },
-    },
+      allWpPage: { nodes: allPages }
+    }
   } = await graphql(`
     query {
       allWpPost {
@@ -38,8 +38,8 @@ exports.createPages = async ({ graphql, actions }) => {
       // In the ^template's GraphQL query, 'id' will be available
       // as a GraphQL variable to query for this post's data.
       context: {
-        id: post.id,
-      },
+        id: post.id
+      }
     })
   })
 
@@ -48,11 +48,12 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: page.uri,
       component: slash(pageTemplate),
+      // component: slash(path.resolve(`./src/templates/Home.jsx`)),
       // In the ^template's GraphQL query, 'id' will be available
       // as a GraphQL variable to query for this post's data.
       context: {
-        id: page.id,
-      },
+        id: page.id
+      }
     })
   })
 
@@ -70,8 +71,8 @@ exports.createPages = async ({ graphql, actions }) => {
         limit: postsPerPage,
         skip: i * postsPerPage,
         numPages,
-        currentPage: i + 1,
-      },
+        currentPage: i + 1
+      }
     })
   })
 }
