@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import logo_icons from "./../images/logo-icons.svg"
 
 const Home = props => {
   const { title, id } = props
 
   const data = useStaticQuery(graphql`
-    query HeaderQuery {
+    query HomeQuery {
       allWpPage(filter: { id: { eq: "cG9zdDoxODk=" } }) {
         nodes {
           id
@@ -27,7 +28,11 @@ const Home = props => {
 
   return (
     <section className="home_landing-section">
-      <h1>{title}</h1>
+      <div className="hero-text-wrapper">
+        <h1>FORTIS GROUP WA</h1>
+        <p>ELECTRICAL | PLUMBING | RETICULATION | HANDYMAN | AIRCON</p>
+        <img className="logo-icons" src={logo_icons} alt="icons" />
+      </div>
       <div className="hero-img">
         <img src={mediaItemUrl} alt="hero" />
       </div>
