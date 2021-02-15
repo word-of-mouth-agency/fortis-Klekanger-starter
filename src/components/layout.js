@@ -33,9 +33,6 @@ const Layout = ({ children, location }) => {
             uri
             title
             slug
-            isOnNav {
-              isonnav
-            }
           }
         }
       }

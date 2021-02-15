@@ -12,39 +12,7 @@ import fb_icon from "./../images/fb-icon.svg"
 import ig_icon from "./../images/instagram-icon.svg"
 
 const Footer = props => {
-  const navPages = []
   const path = globalHistory.location.pathname
-
-  const allPages = () => {
-    props.pages.nodes.forEach(page => {
-      if (page.isOnNav.isonnav === true) {
-        navPages.push(
-          <li key={page.id}>
-            {path === page.uri ? (
-              <Link
-                to={page.uri}
-                style={{ fontWeight: "bold" }}
-                className={`footerlink_${page.slug} navlink`}
-              >
-                {page.title.toUpperCase()}
-              </Link>
-            ) : (
-              <Link
-                to={page.uri}
-                style={{ fontWeight: "400" }}
-                className={`footerlink_${page.slug} navlink`}
-              >
-                {page.title.toUpperCase()}
-              </Link>
-            )}
-          </li>
-        )
-      }
-      console.log(page)
-    })
-  }
-
-  allPages()
 
   return (
     <>
@@ -76,7 +44,103 @@ const Footer = props => {
           </li>
         </ul>
         <h3 className="footer-title footer-title-nav">Navigation</h3>
-        <ul className="footer-pages">{navPages}</ul>
+        <ul className="footer-pages">
+          <li key="home">
+            {path === "/" ? (
+              <Link
+                to="/"
+                style={{ fontWeight: "bold" }}
+                className={`navlink_home navlink`}
+              >
+                HOME
+              </Link>
+            ) : (
+              <Link
+                to="/"
+                style={{ fontWeight: "400" }}
+                className={`navlink_home navlink`}
+              >
+                HOME
+              </Link>
+            )}
+          </li>
+          <li key="about">
+            {path === "/about/" ? (
+              <Link
+                to="/about/"
+                style={{ fontWeight: "bold" }}
+                className={`navlink_about navlink`}
+              >
+                ABOUT
+              </Link>
+            ) : (
+              <Link
+                to="/about/"
+                style={{ fontWeight: "400" }}
+                className={`navlink_about navlink`}
+              >
+                ABOUT
+              </Link>
+            )}
+          </li>
+          <li key="services">
+            {path === "/services/" ? (
+              <Link
+                to="/services/"
+                style={{ fontWeight: "bold" }}
+                className={`navlink_services navlink`}
+              >
+                SERVICES
+              </Link>
+            ) : (
+              <Link
+                to="/services/"
+                style={{ fontWeight: "400" }}
+                className={`navlink_services navlink`}
+              >
+                SERVICES
+              </Link>
+            )}
+          </li>
+          <li key="contact">
+            {path === "/contact/" ? (
+              <Link
+                to="/contact/"
+                style={{ fontWeight: "bold" }}
+                className={`navlink_contact navlink`}
+              >
+                CONTACT
+              </Link>
+            ) : (
+              <Link
+                to="/contact/"
+                style={{ fontWeight: "400" }}
+                className={`navlink_contact navlink`}
+              >
+                CONTACT
+              </Link>
+            )}
+          </li>
+          <li key="book-a-quote">
+            {path === "/book-a-quote/" ? (
+              <Link
+                to="/book-a-quote/"
+                style={{ fontWeight: "bold" }}
+                className={`navlink_book-a-quote navlink`}
+              >
+                BOOK A QUOTE
+              </Link>
+            ) : (
+              <Link
+                to="/book-a-quote/"
+                style={{ fontWeight: "400" }}
+                className={`navlink_book-a-quote navlink`}
+              >
+                BOOK A QUOTE
+              </Link>
+            )}
+          </li>
+        </ul>
         <p className="copyright footer-small">© Fortis Group WA 2020</p>
         <p className="website-by footer-small">
           Website by Word of Mouth - Spread The Word!
