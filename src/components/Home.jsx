@@ -10,8 +10,9 @@ const Home = props => {
       allWpPage(filter: { id: { eq: "cG9zdDoxODk=" } }) {
         nodes {
           id
-          page_content {
-            pageName
+          homepage_content {
+            landingTitle
+            landingText
             heroImage {
               mediaItemUrl
             }
@@ -22,16 +23,21 @@ const Home = props => {
   `)
 
   const page = data.allWpPage.nodes.find(obj => obj.id === id)
-  const { page_content } = page
-  const { heroImage } = page_content
+  const { homepage_content } = page
+  const { heroImage, landingTitle, landingText } = homepage_content
   const { mediaItemUrl } = heroImage
 
   return (
     <section className="home_landing-section">
       <div className="hero-text-wrapper">
-        <h1>FORTIS GROUP WA</h1>
+        <h1>{landingTitle.toUpperCase()}</h1>
         <p>ELECTRICAL | PLUMBING | RETICULATION | HANDYMAN | AIRCON</p>
         <img className="logo-icons" src={logo_icons} alt="icons" />
+        <p>{landingText}</p>
+        <div className="landing-btns">
+          <button className="cta-btn">BOOK A QUOTE</button>
+          <button className="secondary-btn">SERVICES</button>
+        </div>
       </div>
       <div className="hero-img">
         <img src={mediaItemUrl} alt="hero" />

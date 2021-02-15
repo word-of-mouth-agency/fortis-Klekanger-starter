@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import logo_icons from "./../images/logo-icons.svg"
 
 const Contact = props => {
   const { title, id } = props
@@ -10,7 +9,7 @@ const Contact = props => {
       allWpPage(filter: { id: { eq: "cG9zdDoxNTQ=" } }) {
         nodes {
           id
-          page_content {
+          contactpage_content {
             pageName
           }
         }
@@ -19,8 +18,8 @@ const Contact = props => {
   `)
 
   const page = data.allWpPage.nodes.find(obj => obj.id === id)
-  const { page_content } = page
-  const { pageName } = page_content
+  const { contactpage_content } = page
+  const { pageName } = contactpage_content
 
   return <section>{<h1>{pageName}</h1>}</section>
 }

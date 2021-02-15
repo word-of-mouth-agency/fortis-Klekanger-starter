@@ -216,6 +216,8 @@ footer ul li a {
 
 .hero-text-wrapper {
   margin: auto;
+  width: 70%;
+  min-width: 250px;
 }
 
 .hero-text-wrapper > h1 {
@@ -225,4 +227,40 @@ footer ul li a {
 
 .logo-icons {
   margin: 20px 0;
+}
+
+button {
+  font-family: var(--font-family-sans);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: all ease 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.landing-btns {
+  display: flex;
+  margin: 40px 0;
+}
+.landing-btns button {
+  margin-right: 20px;
+}
+
+.cta-btn {
+  background-color: #f2bb2f;
+}
+.cta-btn:hover {
+  background-color: #ae8317;
+}
+
+.secondary-btn {
+  background-color: #d4d4d4;
+}
+.secondary-btn:hover {
+  background-color: #888888;
 }
