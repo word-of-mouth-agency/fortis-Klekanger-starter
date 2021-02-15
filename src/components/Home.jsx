@@ -9,7 +9,6 @@ const Home = props => {
       allWpPage(filter: { id: { eq: "cG9zdDoxODk=" } }) {
         nodes {
           id
-          slug
           page_content {
             pageName
             heroImage {
