@@ -6,7 +6,7 @@ const Home = props => {
 
   const data = useStaticQuery(graphql`
     query HeaderQuery {
-      allWpPage {
+      allWpPage(filter: { id: { eq: "cG9zdDoxODk=" } }) {
         nodes {
           id
           slug
@@ -29,7 +29,7 @@ const Home = props => {
   return (
     <div>
       <h1>{title}</h1>
-      <img src={mediaItemUrl} />
+      <img src={mediaItemUrl} alt="hero" />
     </div>
   )
 }
