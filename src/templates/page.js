@@ -19,8 +19,8 @@ const PageTemplate = ({ data, location, pageContext }) => {
   return (
     <Layout location={location}>
       <SEO title={title || "Untitled"} />
-      <div className={styles.postContainer}>
-        <article>
+      <div>
+        <article className="page-component">
           <ComponentToRender title={title} id={id} />
         </article>
       </div>

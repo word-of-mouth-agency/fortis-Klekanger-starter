@@ -22,14 +22,16 @@ const Home = props => {
 
   const page = data.allWpPage.nodes.find(obj => obj.id === id)
   const { page_content } = page
-  const { heroImage, pageName } = page_content
+  const { heroImage } = page_content
   const { mediaItemUrl } = heroImage
 
   return (
-    <div>
+    <section className="home_landing-section">
       <h1>{title}</h1>
-      <img src={mediaItemUrl} alt="hero" />
-    </div>
+      <div className="hero-img">
+        <img src={mediaItemUrl} alt="hero" />
+      </div>
+    </section>
   )
 }
 export default Home
