@@ -9,23 +9,19 @@ import SEO from "../components/seo"
 import styles from "./post.module.css"
 import Components from "./../components/Components"
 
-const PageTemplate = ({ data, location }) => {
+const PageTemplate = ({ data, location, pageContext }) => {
   const { page } = data
-  const { title, page_content } = page
+  const { title, id } = page
   const type = title.toString()
   const ComponentToRender = Components[type]
+  console.log("data is", pageContext)
+
   return (
     <Layout location={location}>
       <SEO title={title || "Untitled"} />
       <div className={styles.postContainer}>
         <article>
-          {/* <h4 className={styles.blogTitle}>{title}</h4> */}
-          {/* <div
-            className={styles.blogText}
-            dangerouslySetInnerHTML={{ __html: content }}
-          /> */}
-          {/* <p>{page_content.testText}</p> */}
-          <ComponentToRender title={title} content={page_content} />
+          <ComponentToRender title={title} id={id} />
         </article>
       </div>
     </Layout>
@@ -39,9 +35,7 @@ export const query = graphql`
   query pageQuery($id: String!) {
     page: wpPage(id: { eq: $id }) {
       title
-      page_content {
-        testText
-      }
+      id
     }
   }
 `

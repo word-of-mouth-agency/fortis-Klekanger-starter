@@ -53,7 +53,7 @@ const Layout = ({ children, location }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <Navbar location={location} pages={pages} />
+      <Navbar location={location} />
       {/* <Header siteTitle={title} siteDesc={description} /> */}
       <main>{children}</main>
 

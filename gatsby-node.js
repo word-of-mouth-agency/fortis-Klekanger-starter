@@ -43,7 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  // Create one unique page per WP page
+  //Create one unique page per WP page
   allPages.forEach(page => {
     createPage({
       path: page.uri,
