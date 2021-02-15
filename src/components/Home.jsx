@@ -28,21 +28,24 @@ const Home = props => {
   const { mediaItemUrl } = heroImage
 
   return (
-    <section className="home_landing-section">
-      <div className="hero-text-wrapper">
-        <h1>{landingTitle.toUpperCase()}</h1>
-        <p>ELECTRICAL | PLUMBING | RETICULATION | HANDYMAN | AIRCON</p>
-        <img className="logo-icons" src={logo_icons} alt="icons" />
-        <p>{landingText}</p>
-        <div className="landing-btns">
-          <button className="cta-btn">BOOK A QUOTE</button>
-          <button className="secondary-btn">SERVICES</button>
+    <div className="homepage">
+      <section className="home_landing-section">
+        <div className="hero-text-wrapper">
+          <h1>{landingTitle.toUpperCase()}</h1>
+          <p>ELECTRICAL | PLUMBING | RETICULATION | HANDYMAN | AIRCON</p>
+          <img className="logo-icons" src={logo_icons} alt="icons" />
+          <p>{landingText}</p>
+          <div className="landing-btns">
+            <button className="cta-btn">BOOK A QUOTE</button>
+            <button className="secondary-btn">SERVICES</button>
+          </div>
         </div>
-      </div>
-      <div className="hero-img">
-        <img src={mediaItemUrl} alt="hero" />
-      </div>
-    </section>
+        <div className="hero-img">
+          <img src={mediaItemUrl} alt="hero" />
+        </div>
+      </section>
+      <section className="home_services-section"></section>
+    </div>
   )
 }
 export default Home
