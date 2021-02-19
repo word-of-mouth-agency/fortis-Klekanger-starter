@@ -288,6 +288,8 @@ button:hover {
   overflow: hidden;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  width: 20vw;
+  min-width: 240px;
 }
 
 .img-card:hover {
@@ -335,9 +337,13 @@ button:hover {
 
 .slick-next {
   position: absolute;
-  right: 200px !important;
+  right: 8vw !important;
 }
 .slick-prev {
   position: absolute;
-  left: 200px !important;
+  left: 8vw !important;
+}
+.slick-prev,
+.slick-next {
+  color: #393939 !important;
 }

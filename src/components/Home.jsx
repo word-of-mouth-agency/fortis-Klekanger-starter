@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import logo_icons from "./../images/logo-icons.svg"
 import "react-slideshow-image/dist/styles.css"
@@ -6,14 +6,14 @@ import "react-slideshow-image/dist/styles.css"
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos"
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos"
 import Slider from "react-slick"
-import { services } from "./services"
+import Services from "./services"
 
 // Import css files
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 const Home = props => {
-  const { title, id } = props
+  const { id } = props
 
   const config = {
     dots: true,
@@ -21,6 +21,8 @@ const Home = props => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    nextArrow: <ArrowForwardIosIcon />,
+    prevArrow: <ArrowBackIosIcon />,
     responsive: [
       {
         breakpoint: 1340,
@@ -41,10 +43,6 @@ const Home = props => {
       }
     ]
   }
-
-  useEffect(() => {
-    console.log("somehting")
-  })
 
   const data = useStaticQuery(graphql`
     query HomeQuery {
@@ -87,10 +85,10 @@ const Home = props => {
       </section>
       <section className="home_services-section">
         <Slider {...config}>
-          {services.map((x, i) => {
+          {Services().map((x, i) => {
             return (
               <div key={i} className="img-card">
-                <div class="card-body">
+                <div className="card-body">
                   <div className="card-title">{x.title}</div>
                   <div className="card-text">{x.text}</div>
                 </div>
