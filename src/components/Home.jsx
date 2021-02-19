@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import logo_icons from "./../images/logo-icons.svg"
+import "react-slideshow-image/dist/styles.css"
+import { Slide } from "react-slideshow-image"
 
 const Home = props => {
   const { title, id } = props
@@ -44,7 +46,30 @@ const Home = props => {
           <img src={mediaItemUrl} alt="hero" />
         </div>
       </section>
-      <section className="home_services-section"></section>
+      <section className="home_services-section">
+        <div className="slide-container">
+          <Slide>
+            <div className="each-slide">
+              <div className="service-div" style={{ backgroundColor: `black` }}>
+                <span>Slide 1</span>
+              </div>
+            </div>
+            <div className="each-slide">
+              <div className="service-div" style={{ backgroundColor: `grey` }}>
+                <span>Slide 2</span>
+              </div>
+            </div>
+            <div className="each-slide">
+              <div
+                className="service-div"
+                style={{ backgroundColor: `aliceblue` }}
+              >
+                <span>Slide 3</span>
+              </div>
+            </div>
+          </Slide>
+        </div>
+      </section>
     </div>
   )
 }
